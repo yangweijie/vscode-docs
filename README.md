@@ -43,11 +43,17 @@ code .
 
 ## 缘起 
 
-Microsoft在2015年4月30日Build 开发者大会上正式宣布了 Visual Studio Code 项目：一个运行于 Mac OS X、Windows和 Linux 之上的，针对于编写现代 Web 和云应用的跨平台源代码编辑器。
+Visual Studio Code 是微软首次为开发者提供「跨平台」的代码编辑器，微软开发部门负责人称：“虽然许多人把 Windows 作为开发环境，但还有很多人用的是 Linux 和 Mac，与其说服这些人改用 Windows，不如在他们使用的平台上提供工具满足其要求。” 可以预见，VSC 的推出将会在开发界掀起轩然大波。
 
-该编辑器也集成了所有一款现代编辑器所应该具备的特性，包括语法高亮（syntax hight lighting），可定制的热键绑定（customizable keyboard bindings），括号匹配（bracket matching）以及代码片段收集（snippets）。Somasegar 也告诉笔者这款编辑器也拥有对 Git 的开箱即用的支持。
+VS Code
 
-虽然基于Atom同样的内核打造，微软以着自身的强技术方案解决了webkit内核做应用的巨大问题-卡顿。打开30M文件秒开这足以完全压倒Sublime和Atom了。但是刚发布那会还没有扩展机制。
+VSC 的编辑器界面依然是微软经典的 VS 风格，对于常接触的人来说会很亲切。在编程语言和语法上支持 C++, jade, PHP, Python, XML, Batch, F#, DockerFile, Coffee Script, Java, HandleBars, R, Objective-C, PowerShell, Luna, Visual Basic, Markdown, JavaScript, JSON, HTML, CSS, LESS, SASS, C#, TypeScript (支持情况)。
+
+经实际体验测试，VS Code 的启动速度以及打开大型文件的速度都非常迅速流畅，完全不卡，加载大文件几乎秒开，相比 Atom、Sublime Text 等感觉都要优秀！这一点对于某些追求效率的朋友来说的确非常诱人！
+
+个人认为 VSC 对WEB和前端开发相对比较友好，相信日后会有不少如 PHP、Python、Ruby、Go、JS、Node 等的开发者会切换到 VSCode 来，它更像一个 WEB 开发界的 VS。
+
+目前比较失望的是 Visual Studio Code 没有中文界面，而且也还没有开放插件扩展功能，不过从配置文件里的配置项命名空间看明显就是插件架构的，估计日后会在新版本开放，相信以微软的号召力，插件丰富繁荣起来应该不是什么问题。
 
 随着时间的流逝，微软也没有忘记更新，2015-11 v0.10.1的发布，已经开始支持扩展了。
 
