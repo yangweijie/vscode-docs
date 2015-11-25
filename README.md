@@ -149,7 +149,7 @@ VSC 的编辑器界面依然是微软经典的 VS 风格，对于常接触的人
   - [Office](docs/runtimes/unity.md)
 - 扩展
   - [概述](docs/extensions/overview.md) 翻译：（[@yangweijie](https://github.com/yangweijie)）√ 校对：（[@yangweijie](https://github.com/yangweijie)）√
-  - [Example-Hello World](docs/extensions/example-hello-world.md)
+  - [Example-Hello World](docs/extensions/example-hello-world.md) 翻译：（[@yangweijie](https://github.com/yangweijie)）√ 校对：（[@yangweijie](https://github.com/yangweijie)）√
   - [Example-字数统计](docs/extensions/example-word-count.md)
   - [Example-语言服务器](docs/extensions/example-language-server.md)
   - [Example-调试器](docs/extensions/example-debuggers.md)
