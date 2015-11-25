@@ -163,6 +163,7 @@ Microsoft在2015年4月30日Build 开发者大会上正式宣布了 Visual Studi
   - [发布工具](docs/tools/vscecli.md)
   - [扩展生成器](docs/tools/yocode,md)
   - [示列](docs/tools/samples.md)
+
 ## 进度记录
 
 - 2015-11, VS Code 发布 v0.10.1 版 开始支持插件扩展 
