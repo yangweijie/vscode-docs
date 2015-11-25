@@ -115,9 +115,54 @@ Microsoft在2015年4月30日Build 开发者大会上正式宣布了 Visual Studi
   - [安装](docs/editor/setup.md)
   - [基本](docs/editor/codebasics.md)
   - [扩展画廊](docs/editor/extension-gallery.md)
+  - [版本控制](docs/editor/versioncontrol.md)
+  - [调试](docs/editor/debugging.md)
+  - [任务](docs/editor/tasks.md)
+  - [为什么需要VS Code](docs/editor/whyvscode.md)
+- 定制化
+  - [概述](docs/customization/overview.md)
+  - [用户和工作空间配置](docs/customization/userandworkspace.md)
+  - [快捷键](docs/customization/keybindings.md)
+  - [代码片段](docs/customization/userdefinedsnippets.md)
+  - [语言高亮](docs/customization/colorizer.md)
+  - [主题](docs/customization/themes.md) 
+- 语言
+  - [概述](docs/languages/overview.md)
+  - [JavaScript](docs/languages/javascript.md)
+  - [C#](docs/languages/csharp.md)
+  - [JSON](docs/languages/json.md)
+  - [HTML](docs/languages/html.md)
+  - [Markdown](docs/languages/markdown.md)
+  - [TypeScript](docs/languages/typescript.md)
+  - [Css、Sass和Less](docs/languages/css.md)
+  - [Dockerfile](docs/languages/dockerfile.md)
+- 运行时
+  - [Node.js](docs/runtimes/nodejs.md)
+  - [ASP.NET 5](docs/runtimes/ASPnet5.md)
+  - [Unity](docs/runtimes/unity.md)
+  - [Office](docs/runtimes/unity.md)
 - 扩展
   - [概述](docs/extensions/overview.md) 翻译：（[@yangweijie](https://github.com/yangweijie)）√ 校对：（[@yangweijie](https://github.com/yangweijie)）√
-
+  - [Example-Hello World](docs/extensions/example-hello-world.md)
+  - [Example-字数统计](docs/extensions/example-word-count.md)
+  - [Example-语言服务器](docs/extensions/example-language-server.md)
+  - [Example-调试器](docs/extensions/example-debuggers.md)
+  - [原则和模式](docs/extensions/patterns-adn-principles.md)
+  - [运行和调试扩展](docs/extensions/debugging-extensions.md)
+  - [安装扩展](docs/extensions/install-extension.md)
+  - [测试扩展](docs/extensions/testing-extensions.md)
+  - [我们扩展的方式](docs/extensions/our-approach.md)
+- 可扩展性手册
+  - [概述](docs/extensionAPI/overview.md)
+  - [扩展清单文件](docs/extensionAPI/extension-mainfest.md)
+  - [贡献点](docs/extensionAPI/extension-points.md)
+  - [激活事件](docs/extensionAPI/activation-events.md)
+  - [API vscode 命名空间](docs/extensionAPI/vscode-api.md)
+  - [API调试](docs/extensionAPI/api-debugging.md)
+- 工具
+  - [发布工具](docs/tools/vscecli.md)
+  - [扩展生成器](docs/tools/yocode,md)
+  - [示列](docs/tools/samples.md)
 ## 进度记录
 
 - 2015-11, VS Code 发布 v0.10.1 版 开始支持插件扩展 
