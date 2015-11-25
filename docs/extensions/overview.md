@@ -9,60 +9,59 @@ MetaDescription: Visual Studio Code has a rich extensibility model for interacti
 
 # Extending Visual Studio Code
 
-If you are interested in extending VS Code, you are in the right place.  Below is an outline of the VS Code extensibility documentation and how to quickly build your first VS Code extension.  If you're curious about our design approach to extensibility for VS Code, you can read about it [here](/docs/extensions/our-approach.md).
+如果你对VS Code感兴趣，你可算找对地方了。下面是VS Code扩展文档的大纲，和如何快速创建你的第一个VS Code扩展。如果你对我们VS Code扩展能力的设计好奇，你看以读[这篇资料](/docs/extensions/our-approach.md).
 
 ![marketplace](images/overview/marketplace.png)
 
->**Tip:** Don't forget there are several ways to [customize](/docs/customization/overview.md) VS Code without writing an extension.  This includes adding [Themes](/docs/customization/themes.md), [basic Language Support](/docs/customization/colorizer.md), and [Snippets](/docs/customization/userdefinedsnippets.md) without writing a single line of code.
+>**Tip:** 不要忘记不写扩展来[定制](/docs/customization/overview.md) VS Code 的几种方法。包括添加[主题](/docs/customization/themes.md)、[基本语言支持](/docs/customization/colorizer.md)及不写一行代码的添加 [Snippets](/docs/customization/userdefinedsnippets.md)。
 
-All VS Code extensions share a common model of contribution (registration), activation (loading) and access to the VS Code extensibility API.  There are however two special flavors of VS Code extensions, language servers and debuggers, which have their own additional protocols and are covered in their own sections of the documentation.
+所有VS Code扩展都遵循着一个通用模式 贡献（注册）、激活（加载）并访问VS Code 扩展 API。但是有两个特殊口味的VS Code扩展：language servers and debuggers, 他们有自己额外的协议并且有自己独立的文档。
 
-1. [Extensions](/docs/extensions/overview.md#extensions) - the base building block
-2. [Language Servers](/docs/extensions/overview.md#language-servers) - for high cost IO or CPU intensive tasks
-3. [Debuggers](/docs/extensions/overview.md#debuggers) - wire up an external debugger
+1. [Extensions](/docs/extensions/overview.md#extensions) - 基本构建块
+2. [Language Servers](/docs/extensions/overview.md#language-servers) - 高IO开销或者CPU敏感的任务
+3. [Debuggers](/docs/extensions/overview.md#debuggers) - 链接一个外部调试器
 
 
 ## Extensions
-All extensions when activated run in our shared extension host process.  This separate process for extensions ensures that VS Code remains responsive through-out.  
+所有激活的扩展跑再我们共享的扩展host进程上。这个供扩展用的单独的进程保证VS Code 自始自终保留响应性。 
 
-Extensions include support for:
+扩展提供的支持包括:
 
-* **Activation** - load an extension when a specific file type is detected, when a specific file exists, or when a command is selected via the Command Palette or a key combination
-* **Editor** - work with the editor's content - read and manipulate text, leverage selection(s)
-* **Workspace** - access working files, the status bar, information messages and more
-* **Eventing** - connect to the editor life-cycle events such as: open, close, change, and more
-* **Evolved editing** - create providers for rich language support including IntelliSense, Peek, Hover, Diagnostics and much, much more
+* **Activation（激活）** - 当一个指定文件类型被检测到、一个指定类型文件存在或者当一个命令被选择了通过命令面板或者快捷键调用时加载一个扩展
+* **Editor(编辑器)** - 作用域编辑器的内容 - 读和操作文本、单个或多个选区
+* **Workspace(工作空间)** - 访问工作文件、状态栏、提示信息或者更多
+* **Eventing(事件)** - 链接编辑器的生命周期，比如：打开、关闭、改变或其他
+* **Evolved editing(增强编辑)** - 创建富语言的支持包括智能感知、Peek、悬停、诊断等等
 
-We have two end-to-end walkthroughs to get you going on extension basics:
+我们有2个端对端的示列让你掌握扩展的基础:
 
-1. **[Hello World](/docs/extensions/example-hello-world.md)** - generate a basic extension, understand an extension's folder structure, the extension manifest, learn how activation works, run and debug your extension and install it locally. 
-2. **[Word Count](/docs/extensions/example-word-count.md)** - activate based on a specific file type, update the status bar, respond to changes in the text editor, and dispose your extension when moving off the file. 
+1. **[Hello World](/docs/extensions/example-hello-world.md)** - 生成一个基本的扩展，理解一个扩展的目录结构、扩展主文件、学习激活的作用、本地执行和调试你的扩展。
+2. **[Word Count](/docs/extensions/example-word-count.md)** - 激活于一个指定的文件类型、更新状态栏、响应文本编辑器的改变，移除文件时处理你的扩展。
 
-## Language Servers
-Language servers let you create a dedicated process for your extension.  This is a useful design choice for your extension when your extension runs high cost CPU or IO intensive tasks which could slow other extensions.  This is common for tasks that work across all files in a workspace e.g. linters or static analysis suites.
+## Language Servers(语言服务器)
+Language servers （语言服务器）供你创建一个给你扩展专用的的进程。这是一个对于你的扩展来说很有用的设计选择当你的扩展运行占用高CPU或者IO开销敏感的任务时可能会拖慢其他扩展。比如这是一个工作空间里全部文件处理的惯例。检查器或者统计分析套件。
 
-Find out more about [language servers](/docs/extensions/example-language-server.md).
+了解更多请看[language servers](/docs/extensions/example-language-server.md)。
 
-## Debuggers
-Connecting a debugger [written in any language] to VS Code is possible through the creation of a debug service.
+## Debuggers（调试器）
+链接一个用[任意语言编写的] 调试器到VS Code 是可能的通过穿件一个debug 调试服务。
 
-Find out more about integrating [debuggers](/docs/extensions/example-debuggers.md).
+了解更多请参阅[debuggers](/docs/extensions/example-debuggers.md)。
  
-The easiest way to see VS Code extensions in action is via the [Extension Gallery](/docs/editor/extension-gallery.md).  You can browse for useful extensions, install them to try them out and get an idea how you might extend VS Code for your own development scenarios. 
+最简单的查看VS Code 有效扩展的方式是通过[扩展画廊](/docs/editor/extension-gallery.md)。你可以浏览有用的扩展、安装和尝试他们并且可能获得适合于你的开发场景的扩展。
+## 编写扩展
+扩展既可以用TypeScript也可以用JavaScript来写。 VS Code 提供了一个一流扩展开发体验，你可以[开发、编译、运行、测试和调试](/docs/extensions/debugging-extensions.md) 全部在VS Code中。
 
-## Writing an Extension
-Extensions can be written in either TypeScript or JavaScript.  VS Code offers a first class extension development experience where you can [develop, build, run, test and debug](/docs/extensions/debugging-extensions.md) all from within VS Code itself.  
+## 安装和分享
+一旦你有一个可用的扩展，你可以[[安装它或者分享它给其他人]](/docs/extensions/install-extension.md)。我们支持本地安装、私有分享或者发布到 [扩展画廊](/docs/editor/extension-gallery.md)里。
 
-## Install and Share
-Once you have a working extension, you can [install it or share it with others](/docs/extensions/install-extension.md).   We support local installation, private sharing, or publishing to the public [Extension Gallery](/docs/editor/extension-gallery.md).
+## 测试扩展
+我们同时也有方便的[[编写和执行测试]](/docs/extensions/testing-extensions.md) 你的扩展的支持。你可以轻松创建调用VS Code APIs 的测试集成 然后在执行VS Code 实例时测试你的代码。
 
-## Testing Extensions
-We also have great support for [writing and running tests](/docs/extensions/testing-extensions.md) for your extension.  You can easily create integration tests which call the VS Code APIs and test your code in a running VS Code instance.
-
-## Next Steps
-* [Your First Extension](/docs/extensions/example-hello-world.md) - Try creating a simple Hello World extension
-* [Extension API](/docs/extensionAPI/overview.md) - Learn about the VS Code extensibility APIs
-* [Samples](/docs/tools/samples.md) - A list of extension samples you can review and build
+## 接下来的步骤
+* [Your First Extension](/docs/extensions/example-hello-world.md) - 尝试创建一个简单的 Hello World 扩展
+* [Extension API](/docs/extensionAPI/overview.md) -了解 VS Code extensibility APIs
+* [Samples](/docs/tools/samples.md) - 一系列示列扩展你可以回顾和编译
 
 ## Common Questions
 
